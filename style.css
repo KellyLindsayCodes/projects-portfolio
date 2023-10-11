@@ -1,0 +1,413 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 4000% 4000%;
+    animation: gradientAnimation 10s ease infinite;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/*header navigation*/
+
+.logo {
+  font-size: 2rem;
+  margin-top: 25px;
+  margin-left: 20px;
+  transition: color 0.5s ease; 
+}
+
+
+.logo a:hover {
+  color: #FEBA4F;
+  transition: color 0.7s ease;
+}
+
+nav {
+  color: #f6f5f4;
+  z-index: 2;
+  position: relative;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f6f5f4;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+nav a:hover {
+  color: #FEBA4F;
+  transition: color 0.7s ease;
+}
+
+.menu {
+  display: flex; 
+}
+
+.menu a {
+  transition: color 0.5s ease; 
+}
+
+.menu a:hover {
+  color: #FEBA4F;
+  transition: color 0.7s ease;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+.menu-toggle .fas.fa-bars {
+  font-size: 36px;
+  margin-top: 40%;
+}
+
+.menu-toggle:hover .fas.fa-bars {
+  color: #FEBA4F;
+}
+
+.menu.show-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-btn {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .menu-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 0%;
+    margin-left: -7%;
+  }
+
+  .menu li {
+    opacity: 0;
+    padding: 5px;
+    transition: opacity 0.5s;
+  }
+
+  .menu-toggle {
+    display: block; 
+  }
+
+  .show-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .close-btn {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #f6f5f4;
+  }
+
+  nav::after {
+    display: none;
+  }  
+
+}
+
+.project-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #f6f5f4;
+  }
+
+  .button-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .live-site-button {
+    margin: 5px;
+    padding: 15px 25px;
+    border: 3px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    font-family: 'Comfortaa';
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .live-site-button a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .live-site-button:hover {
+    border-color: #FEBA4F;
+    color: #FEBA4F;
+    transition: color 0.5s ease, border-color 0.5s ease;
+  }
+
+  .button-wrapper {
+    display: flex;
+    align-items: center; 
+  }
+
+  .project-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .image-wrapper,
+  .text-container {
+    color: #FEBA4F;
+    background-color: white;
+    width: 50%; 
+    box-sizing: border-box; 
+    background-color: white;
+    border: 1px solid #ccc; 
+    border-radius: 20px;
+    padding: 20px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .image-wrapper img {
+    display: block;
+    margin: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h3 {
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 1.8rem; 
+    margin-bottom: 5px;
+}
+  
+h4 {
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 1.2rem; 
+}
+
+.skills {
+    list-style: disc;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 1rem; 
+  }
+
+  .skill {
+    margin-bottom: 5px;
+  }
+
+  .text-container p {
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 1.5;
+  }
+
+  .github-button {
+    font-size: 46px;
+    color: white;
+    margin-left: 5px;
+  }
+
+  .github-button:hover {
+    color: #FEBA4F;
+    transition: color 0.7s ease;
+  }
+  
+  .text-container,
+  .live-site-button {
+    margin: 5px;
+    padding: 15px 25px;
+    border: 3px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    font-family: 'Comfortaa';
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+    .text-container h4,
+    .text-container p,
+    .text-container .skills {
+        margin-bottom: 10px; 
+    }
+  
+
+/*footer navigation*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-signature h1 {
+  color: #f6f5f4;
+  font-size: 1rem;
+  font-family: 'Comfortaa', cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.to-top {
+  background: #f6f5f4;
+  position: fixed;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#1f1f1f;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+}
+
+@media screen and (max-width: 500px) {
+    .button-wrapper {
+      flex-direction: column;
+    }
+
+    .text-container .button-wrapper {
+        flex-direction: row;
+      }
+
+    .live-site-button {
+        margin: 5px;
+        padding: 15px 25px; 
+        min-width: 150px; 
+        text-align: center; 
+        border: 3px solid white;
+        border-radius: 25px;
+        background-color: transparent;
+        text-decoration: none;
+        color: white;
+        font-family: 'Comfortaa';
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        letter-spacing: 2px;
+        width: 100%;
+    }
+
+    .image-wrapper {
+        height: 400px;
+    }
+
+    .text-container {
+        height: 900px;
+    }
+
+    .github-button {
+        font-size: 26px;
+      }
+
+    .text-container,
+    .live-site-button {
+        font-size: 12px;
+        
+    }
+  
+}
+
+@media screen and (max-width: 885px) {
+    .project-wrapper {
+      flex-direction: column; 
+      width: 100%; 
+    }
+  
+    .image-wrapper,
+    .text-container {
+      width: 100%;
+    }
+  }
